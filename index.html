@@ -1282,6 +1282,40 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
 @media(max-width:600px){.sbt-topbar{height:64px!important}.sbt-brief{margin-bottom:12px}.sbt-detail-page{min-height:calc(100dvh - 64px)}.sbt-accordion details{margin:12px 0}.sbt-panel{padding:2px 16px 20px}.sbt-legal-footer{padding:26px 25px 50px}.cota{min-width:0!important}.cotas-one{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important}.cota .cota-qtd{font-size:16px!important}.cota h1{font-size:16px!important}.cota h2{font-size:10px!important}}
 </style><style id="sbt-live-winners-style">
 .sbt-live-winners{display:flex;align-items:stretch;gap:10px;max-width:680px;margin:12px auto 25px;padding:0 10px;min-height:120px;overflow:hidden;font-family:Inter,Arial,sans-serif}.sbt-live-trophy{flex:0 0 112px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#111;font-size:12px;line-height:1.05;z-index:2;background:#fff}.sbt-live-cup{font-size:56px;display:block;filter:drop-shadow(0 2px 3px #d0a735);animation:sbt-cup-bounce 2.4s ease-in-out infinite}.sbt-live-viewport{min-width:0;overflow:hidden;flex:1;mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent)}.sbt-live-track{display:flex;align-items:stretch;gap:12px;width:max-content;min-height:120px}.sbt-live-card{flex:0 0 210px;display:flex;align-items:center;gap:9px;background:#f5f7fb;border-radius:13px;padding:12px 10px;min-height:112px;color:#101010}.sbt-live-bolt{font-size:39px;animation:sbt-bolt-pulse 1.6s ease-in-out infinite;filter:drop-shadow(0 1px 5px #ffc80088)}.sbt-live-info{display:flex;flex-direction:column;gap:3px;min-width:0;text-align:right;flex:1}.sbt-live-info b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sbt-live-info small{font-size:12px;color:#666}.sbt-live-info strong{font-size:18px}.sbt-live-empty{font-size:13px;color:#606b7c;padding:25px 8px;max-width:270px;white-space:normal}.sbt-live-track.is-animated{animation:sbt-winners-scroll var(--scroll-duration,30s) linear infinite}.sbt-live-viewport:active .sbt-live-track,.sbt-live-viewport:hover .sbt-live-track{animation-play-state:paused}@keyframes sbt-winners-scroll{to{transform:translateX(-50%)}}@keyframes sbt-cup-bounce{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(8deg) translateY(-7px)}}@keyframes sbt-bolt-pulse{50%{transform:scale(1.12);opacity:.8}}@media(max-width:380px){.sbt-live-trophy{flex-basis:95px}.sbt-live-card{flex-basis:190px}}@media(prefers-reduced-motion:reduce){.sbt-live-cup,.sbt-live-bolt,.sbt-live-track.is-animated{animation:none!important}.sbt-live-viewport{overflow-x:auto}}
+</style>
+<style id="app-mobile-fullscreen-2026">
+/* Etapas como telas do aplicativo, não janelas centralizadas. */
+#modalPagamento{position:fixed!important;inset:0!important;z-index:99999!important;background:#fff!important;padding:0!important;overflow-y:auto!important;align-items:stretch!important;justify-content:center!important;}
+#modalPagamento .modal-conteudo{position:relative!important;flex:1 1 auto!important;width:100%!important;max-width:560px!important;height:100dvh!important;max-height:100dvh!important;min-height:100dvh!important;margin:0 auto!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow-y:auto!important;background:#fff!important;padding:0!important;}
+#modalPagamento .modal-header{background:#1047f5!important;min-height:64px!important;padding:9px 65px!important;display:flex!important;justify-content:center!important;align-items:center!important;margin:0!important;}
+#modalPagamento .logo-modal{max-height:45px!important;max-width:180px!important;object-fit:contain!important;filter:brightness(0) invert(1);margin:0!important;}
+#modalPagamento .btn-fechar-modal{position:fixed!important;top:12px!important;right:max(12px,calc((100vw - 560px)/2 + 12px))!important;z-index:100!important;border-radius:50%!important;background:#ffffff22!important;color:white!important;box-shadow:none!important;}
+#modalPagamento .modal-body{padding:18px 16px 110px!important;max-width:560px!important;margin:auto!important;}
+#modalPagamento .funil-unificado{background:#f8faff!important;padding:14px 16px!important;margin:0!important;}
+#etapaCarrinho .app-cart-title{text-align:center;font-size:21px!important;color:#111;margin:20px 0 16px;font-weight:800}
+#etapaCarrinho .app-cart-summary{background:#f4f6fb;border-radius:12px;padding:14px;display:grid;gap:10px;margin-bottom:16px}
+#etapaCarrinho .app-cart-summary>div{display:flex;justify-content:space-between;background:white;padding:14px 12px;border-radius:10px;gap:12px}
+#etapaCarrinho .app-offer-title{text-align:center;font-size:17px;font-weight:800;margin:22px 0 16px;color:#111}
+#etapaCarrinho .app-addons{display:grid;gap:12px}
+#etapaCarrinho .app-addons button{display:flex;justify-content:space-between;align-items:center;text-align:left;background:#fff;border:1px solid #dce5ff;border-radius:10px;padding:15px 14px;min-height:68px;color:#111;cursor:pointer;width:100%;font:inherit}
+#etapaCarrinho .app-addons button:active{background:#eaf0ff;border-color:#124aff}
+#etapaCarrinho .app-addons button span{display:grid;gap:4px}#etapaCarrinho .app-addons small{color:#667085;font-size:12px}
+#etapaCarrinho .app-cart-bottom{position:sticky;bottom:0;background:#f6f8ff;border-radius:16px 16px 0 0;padding:16px 12px calc(12px + env(safe-area-inset-bottom));margin:22px -16px -110px;box-shadow:0 -4px 20px #0015}
+#etapaCarrinho .app-total{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}#etapaCarrinho .app-total strong{font-size:24px;color:#ffae26}
+#etapaCarrinho #btnCarrinhoPagar{position:static!important;width:100%;background:#28c866!important;border-radius:8px!important;box-shadow:none!important;}
+@media(max-width:600px){#modalPagamento .modal-conteudo{max-width:100%!important}#modalPagamento .btn-fechar-modal{right:12px!important}#modalPagamento .modal-body{padding-left:13px!important;padding-right:13px!important}#etapaCarrinho .app-cart-bottom{margin-left:-13px;margin-right:-13px}}
+</style>
+<style id="depoimentos-mobile-style">
+.sbt-live-winners{max-width:680px;min-height:164px;align-items:center}
+.sbt-live-trophy{flex-basis:105px;align-self:stretch}
+.sbt-live-cup{font-size:52px}
+.sbt-live-viewport{overflow:hidden;touch-action:pan-y;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+.sbt-live-track{gap:10px;min-height:150px;align-items:center}
+.sbt-live-track .ganhador-card{flex:0 0 108px;width:108px;height:154px;border-radius:12px;scroll-snap-align:none}
+.sbt-live-track .ganhador-play{width:37px;height:30px;font-size:15px;border-radius:9px}
+.sbt-live-track .ganhador-legenda{font-size:8px;left:6px;right:6px;bottom:7px}
+@media(max-width:400px){.sbt-live-trophy{flex-basis:88px}.sbt-live-track .ganhador-card{flex-basis:100px;width:100px;height:145px}}
+@media(prefers-reduced-motion:reduce){.sbt-live-viewport{overflow-x:auto;touch-action:pan-x}.sbt-live-track.is-animated{animation:none!important}}
 </style></head>
 <body>
     <header class="sbt-topbar"><button type="button" class="sbt-menu" aria-label="Menu" onclick="document.getElementById('informacoesPromo').scrollIntoView({behavior:'smooth'})">☰</button><div class="sbt-wordmark"><span>sbt</span> PRÊMIOS</div><span class="sbt-profile" aria-hidden="true">◉</span></header>
@@ -1302,7 +1336,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
         <details><summary>Condições Gerais</summary><div class="sbt-panel"><h3>Informações legais</h3><p>O organizador deverá informar razão social, CNPJ, modalidade, autorização aplicável, critérios de apuração, regras de elegibilidade, atendimento e condições de entrega.</p><p>O regulamento completo precisa estar disponível antes da contratação. A compra não garante prêmio instantâneo.</p></div></details>
       </div>
     </section>
-    <section class="sbt-live-winners" aria-label="Últimos ganhadores confirmados"><div class="sbt-live-trophy"><span class="sbt-live-cup" aria-hidden="true">🏆</span><strong>ÚLTIMOS<br>GANHADORES</strong></div><div class="sbt-live-viewport"><div class="sbt-live-track" id="sbtLiveTrack"><div class="sbt-live-empty">Aguardando publicação de resultados confirmados.</div></div></div></section>
+    <section class="sbt-live-winners" aria-label="Vídeos de depoimentos publicados"><div class="sbt-live-trophy"><span class="sbt-live-cup" aria-hidden="true">🏆</span><strong>ÚLTIMOS<br>GANHADORES</strong></div><div class="sbt-live-viewport" id="depoimentosViewport" tabindex="0" aria-label="Carrossel de depoimentos; deslize para navegar"><div class="sbt-live-track" id="depoimentosTrack"></div></div></section>
     <!-- PACOTES DE COTAS - R$ 0,49 POR TÍTULO / MÍNIMO 15 -->
     <div class="container-principal">
         <div class="cotas">
@@ -1481,19 +1515,17 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
 <div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div><div class="etapa-nome">CPF</div></div><div class="etapa-item"><div class="etapa-numero">2</div><div class="etapa-nome">Bilhetes</div></div><div class="etapa-item"><div class="etapa-numero">3</div><div class="etapa-nome">Pagamento</div></div><div class="etapa-item"><div class="etapa-numero">4</div><div class="etapa-nome">Concluído</div></div></div>
  <div class="modal-body">
   
-  <div class="cart-head">Seu carrinho</div>
-  <div class="cart-line"><div><strong>🎟️ Números da sorte</strong><div class="cart-sub">Ajuste seus títulos</div></div><div class="cart-counter"><button type="button" onclick="mudarQuantidadeCarrinho(-1)" aria-label="Diminuir">−</button><strong id="cartQtd">8</strong><button type="button" onclick="mudarQuantidadeCarrinho(1)" aria-label="Aumentar">+</button></div></div>
-  <div class="cart-offer"><div class="cart-offer-top">🎁 PRÊMIOS DA EDIÇÃO</div><div class="cart-offer-body">
-<div class="premio-card"><strong>🎉 Hoje: até R$ 200 mil no PIX, casas e carros</strong><div class="premio-timer">⏳ Em breve: <b class="contador-hoje">30:00</b> · <span class="data-hoje">—</span></div></div>
-<div class="premio-card"><strong>🏆 Domingo: R$ 1 milhão</strong><div class="premio-timer">⏳ <span class="data-domingo">—</span>, 21h: <b class="contador-domingo">—</b></div></div>
-<p class="premio-nota">O contador de 30 min é ilustrativo, não o horário oficial do sorteio. Consulte o regulamento.</p><span class="cart-offer-quantity">🎟️ <b id="cartQtdOferta">8</b> títulos</span></div></div>
-  <div class="cart-summary-title">RESUMO <small>da sua compra</small></div>
-  <div class="cart-line"><span>🎟️ Números da sorte</span><strong id="cartQtdResumo">8</strong></div>
-  <div class="cart-line cart-price-line"><span>Valor dos títulos</span><strong id="cartValor">R$ 0,00</strong></div>
-  <div class="cart-total"><span>Total a pagar</span><span id="cartTotal">R$ 0,00</span></div>
-  <div class="pix-only" role="radio" aria-checked="true"><span class="pix-radio" aria-hidden="true"></span><img class="pix-logo" src="https://baixarfavicon.com.br/wp-content/themes/baixarfavicon/ferramentas/logos-pix-png/logos/logo-pix-520x520.png" alt="Logo Pix"><strong>Pix</strong><span class="pix-selected">Selecionado</span></div>
-  <div class="cart-terms">Ao continuar, você aceita os termos e condições.</div>
-  <button type="button" class="btn-principal" id="btnCarrinhoPagar" onclick="irParaWhatsApp()">Continuar para pagamento →</button>
+  <h2 class="app-cart-title">Resumo da compra</h2>
+  <div class="app-cart-summary"><div>Quantidade de títulos <strong id="cartQtdResumo">8</strong></div><div>Valor total <strong id="cartValor">R$ 3,92</strong></div></div>
+  <h3 class="app-offer-title">Aumente suas chances com mais títulos!</h3>
+  <div class="app-addons">
+    <button type="button" onclick="adicionarTitulos(8)"><span><b>Nova chance</b><small>+8 títulos</small></span><strong>+R$ 3,92</strong></button>
+    <button type="button" onclick="adicionarTitulos(15)"><span><b>Grande chance</b><small>+15 títulos</small></span><strong>+R$ 7,35</strong></button>
+    <button type="button" onclick="adicionarTitulos(25)"><span><b>Super chance</b><small>+25 títulos</small></span><strong>+R$ 12,25</strong></button>
+    <button type="button" onclick="adicionarTitulos(50)"><span><b>Super mega chance</b><small>+50 títulos</small></span><strong>+R$ 24,50</strong></button>
+  </div>
+  <div class="app-cart-bottom"><div class="app-total"><span>VALOR TOTAL</span><strong id="cartTotal">R$ 3,92</strong></div>
+  <button type="button" class="btn-principal" id="btnCarrinhoPagar" onclick="irParaWhatsApp()">CONTINUAR PARA PAGAMENTO →</button></div>
  </div>
 </div>
 
@@ -2035,12 +2067,18 @@ function mostrarCarrinho(){
 }
 function atualizarCarrinho(){
  if(!pacoteSelecionado)return;
- document.getElementById('cartQtd').textContent=pacoteSelecionado.quantidade;
- document.getElementById('cartQtdOferta').textContent=pacoteSelecionado.quantidade;
+ const qtdEl=document.getElementById('cartQtd'); if(qtdEl)qtdEl.textContent=pacoteSelecionado.quantidade;
+ const ofertaEl=document.getElementById('cartQtdOferta'); if(ofertaEl)ofertaEl.textContent=pacoteSelecionado.quantidade;
  document.getElementById('cartQtdResumo').textContent=pacoteSelecionado.quantidade;
  document.getElementById('cartValor').textContent=formatarBRL(pacoteSelecionado.valor);
  document.getElementById('cartTotal').textContent=formatarBRL(pacoteSelecionado.valor);
  atualizarResumoCompra();
+}
+function adicionarTitulos(qtd){
+ if(!pacoteSelecionado)return;
+ const nova=Math.min(MAXIMO_TITULOS,pacoteSelecionado.quantidade+qtd);
+ pacoteSelecionado={quantidade:nova,valor:Math.round(nova*49)/100};
+ atualizarCarrinho();
 }
 function mudarQuantidadeCarrinho(delta){
  if(!pacoteSelecionado)return;
@@ -2992,9 +3030,25 @@ let somPiaoCtx=null,somPiaoTimer=null;
 function tocarSomPiao(){try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;somPiaoCtx=somPiaoCtx||new AC();somPiaoCtx.resume();let n=0;somPiaoTimer=setInterval(()=>{let osc=somPiaoCtx.createOscillator(),gain=somPiaoCtx.createGain();osc.type='triangle';osc.frequency.value=620+(n++%5)*80;gain.gain.setValueAtTime(.045,somPiaoCtx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,somPiaoCtx.currentTime+.08);osc.connect(gain);gain.connect(somPiaoCtx.destination);osc.start();osc.stop(somPiaoCtx.currentTime+.09)},115)}catch(e){}}
 function pararSomPiao(){if(somPiaoTimer){clearInterval(somPiaoTimer);somPiaoTimer=null}}
 function celebrarPiao(){for(let i=0;i<65;i++){let c=document.createElement('span');c.className='piao-confete';c.style.left=Math.random()*100+'vw';c.style.background=['#ffd24f','#21d779','#fff','#467eff'][i%4];c.style.animationDelay=Math.random()*.8+'s';document.body.append(c);setTimeout(()=>c.remove(),4400)}}
-</script><footer class="sbt-legal-footer" id="sbtRodape"><div class="sbt-footer-inner"><div class="sbt-footer-logo"><span>sbt</span> PRÊMIOS</div><h3>Informações da promoção</h3><p>Antes de adquirir títulos, consulte o regulamento oficial, os dados da empresa responsável, a modalidade da promoção, os critérios de apuração e os canais de atendimento.</p><div class="sbt-footer-links"><button type="button" onclick="abrirDetalhesPiao('condicoes')">Condições gerais</button><button type="button" onclick="abrirDetalhesPiao('descricao')">Como participar</button><button type="button" onclick="abrirDetalhesPiao('premiacoes')">Premiações</button></div><p class="sbt-footer-disclaimer">Este projeto utiliza elementos visuais de referência. Marcas, certificações, CNPJ, autorizações e instituições de terceiros não representam vínculo ou aprovação desta operação.</p></div></footer><script id="sbt-app-navigation-final">(function(){let detailsOpen=false;let previousY=0;const page=()=>document.getElementById('sbtDetalhes');function show(section){if(detailsOpen)return;previousY=window.scrollY;detailsOpen=true;document.body.classList.add('sbt-detail-open');page().hidden=false;window.scrollTo(0,0);if(section){const i={descricao:0,instantaneas:1,premiacoes:2,condicoes:3}[section];if(i!==undefined){const d=page().querySelectorAll('details')[i];d.open=true;}}history.pushState({sbtInternalDetails:true},'','#detalhes');}function hide(fromHistory){if(!detailsOpen)return;detailsOpen=false;page().hidden=true;document.body.classList.remove('sbt-detail-open');window.scrollTo(0,previousY);if(!fromHistory&&history.state&&history.state.sbtInternalDetails)history.back();}window.abrirDetalhesPiao=show;window.fecharDetalhesPiao=()=>hide(false);window.mudarPremios=function(btn,kind){btn.parentNode.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===btn));document.getElementById('sbtPremiosGrid').innerHTML='<p>'+ (kind==='disponiveis'?'Os prêmios disponíveis serão mostrados quando o sistema fornecer dados confirmados.':'Os prêmios encontrados serão mostrados quando houver resultados oficialmente confirmados.')+'</p>';};window.addEventListener('popstate',()=>{if(detailsOpen)hide(true)});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&detailsOpen)hide(false)});})();</script><script id="sbt-live-winners-script">
-(()=>{const track=document.getElementById('sbtLiveTrack');if(!track)return;const money=new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'});function node(tag,cls,txt){const el=document.createElement(tag);el.className=cls;if(txt!==undefined)el.textContent=txt;return el;}
-async function refresh(){try{const response=await fetch('/api/resultados',{cache:'no-store'});if(!response.ok)throw Error('sem dados');const body=await response.json();const list=Array.isArray(body.resultados)?body.resultados.filter(x=>x.confirmado===true&&x.nome&&Number(x.valor)>0):[];track.replaceChildren();track.classList.remove('is-animated');if(!list.length){track.append(node('div','sbt-live-empty','Aguardando publicação de resultados confirmados.'));return;}function add(x){const card=node('article','sbt-live-card');card.append(node('span','sbt-live-bolt','⚡'));const info=node('div','sbt-live-info');info.append(node('b','',x.nome),node('small','',x.horario),node('strong','',money.format(x.valor)),node('small','',x.estado));card.append(info);track.append(card);}const entries=list.length<4?Array.from({length:Math.ceil(4/list.length)},()=>list).flat():list;entries.forEach(add);entries.forEach(add);track.style.setProperty('--scroll-duration',`${Math.max(18,entries.length*5)}s`);requestAnimationFrame(()=>track.classList.add('is-animated'));}catch{if(!track.children.length)track.append(node('div','sbt-live-empty','Resultados indisponíveis no momento.'));}}
-refresh();setInterval(refresh,60000);})();
-</script></body>
+</script><footer class="sbt-legal-footer" id="sbtRodape"><div class="sbt-footer-inner"><div class="sbt-footer-logo"><span>sbt</span> PRÊMIOS</div><h3>Informações da promoção</h3><p>Antes de adquirir títulos, consulte o regulamento oficial, os dados da empresa responsável, a modalidade da promoção, os critérios de apuração e os canais de atendimento.</p><div class="sbt-footer-links"><button type="button" onclick="abrirDetalhesPiao('condicoes')">Condições gerais</button><button type="button" onclick="abrirDetalhesPiao('descricao')">Como participar</button><button type="button" onclick="abrirDetalhesPiao('premiacoes')">Premiações</button></div><p class="sbt-footer-disclaimer">Este projeto utiliza elementos visuais de referência. Marcas, certificações, CNPJ, autorizações e instituições de terceiros não representam vínculo ou aprovação desta operação.</p></div></footer><script id="sbt-app-navigation-final">(function(){let detailsOpen=false;let previousY=0;const page=()=>document.getElementById('sbtDetalhes');function show(section){if(detailsOpen)return;previousY=window.scrollY;detailsOpen=true;document.body.classList.add('sbt-detail-open');page().hidden=false;window.scrollTo(0,0);if(section){const i={descricao:0,instantaneas:1,premiacoes:2,condicoes:3}[section];if(i!==undefined){const d=page().querySelectorAll('details')[i];d.open=true;}}history.pushState({sbtInternalDetails:true},'','#detalhes');}function hide(fromHistory){if(!detailsOpen)return;detailsOpen=false;page().hidden=true;document.body.classList.remove('sbt-detail-open');window.scrollTo(0,previousY);if(!fromHistory&&history.state&&history.state.sbtInternalDetails)history.back();}window.abrirDetalhesPiao=show;window.fecharDetalhesPiao=()=>hide(false);window.mudarPremios=function(btn,kind){btn.parentNode.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===btn));document.getElementById('sbtPremiosGrid').innerHTML='<p>'+ (kind==='disponiveis'?'Os prêmios disponíveis serão mostrados quando o sistema fornecer dados confirmados.':'Os prêmios encontrados serão mostrados quando houver resultados oficialmente confirmados.')+'</p>';};window.addEventListener('popstate',()=>{if(detailsOpen)hide(true)});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&detailsOpen)hide(false)});})();</script><script id="sbt-depoimentos-carousel">(function(){
+function init(){
+ const track=document.getElementById('depoimentosTrack');
+ const viewport=document.getElementById('depoimentosViewport');
+ const originals=[...document.querySelectorAll('.ganhadores-lista .ganhador-card')];
+ if(!track||!viewport||!originals.length)return;
+ function add(original){
+  const card=original.cloneNode(true);
+  card.addEventListener('click',()=>original.click());
+  track.appendChild(card);
+ }
+ originals.forEach(add);originals.forEach(add);
+ track.classList.add('is-animated');
+ track.style.setProperty('--scroll-duration',Math.max(30,originals.length*6)+'s');
+ viewport.addEventListener('focusin',()=>track.style.animationPlayState='paused');
+ viewport.addEventListener('focusout',()=>track.style.animationPlayState='');
+ viewport.addEventListener('touchstart',()=>track.style.animationPlayState='paused',{passive:true});
+ viewport.addEventListener('touchend',()=>track.style.animationPlayState='');
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();</script></body>
 </html>
