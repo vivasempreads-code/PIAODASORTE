@@ -1437,7 +1437,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
                 <div class="modal-header">
                     <img src="images/logoviva.png" alt="Sorte" class="logo-modal">
                 </div>
-<div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div><div class="etapa-nome">CPF</div></div><div class="etapa-item"><div class="etapa-numero">2</div><div class="etapa-nome">Bilhetes</div></div><div class="etapa-item"><div class="etapa-numero">3</div><div class="etapa-nome">Pagamento</div></div><div class="etapa-item"><div class="etapa-numero">4</div><div class="etapa-nome">Concluído</div></div></div>
+<div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div></div><div class="etapa-item"><div class="etapa-numero">2</div></div><div class="etapa-item"><div class="etapa-numero">3</div></div><div class="etapa-item"><div class="etapa-numero">4</div></div></div>
                 
                 
                 
@@ -1481,7 +1481,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
             
             <div id="etapaCarrinho" class="etapa">
  <div class="modal-header"><img src="images/logoviva.png" alt="Viva Sorte" class="logo-modal"></div>
-<div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div><div class="etapa-nome">CPF</div></div><div class="etapa-item"><div class="etapa-numero">2</div><div class="etapa-nome">Bilhetes</div></div><div class="etapa-item"><div class="etapa-numero">3</div><div class="etapa-nome">Pagamento</div></div><div class="etapa-item"><div class="etapa-numero">4</div><div class="etapa-nome">Concluído</div></div></div>
+<div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div></div><div class="etapa-item"><div class="etapa-numero">2</div></div><div class="etapa-item"><div class="etapa-numero">3</div></div><div class="etapa-item"><div class="etapa-numero">4</div></div></div>
  <div class="modal-body">
   
   <h2 class="app-cart-title">Resumo da compra</h2>
@@ -1504,7 +1504,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
                 <div class="modal-header">
                     <img src="images/logoviva.png" alt="Sorte" class="logo-modal">
                 </div>
-<div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div><div class="etapa-nome">CPF</div></div><div class="etapa-item"><div class="etapa-numero">2</div><div class="etapa-nome">Bilhetes</div></div><div class="etapa-item"><div class="etapa-numero">3</div><div class="etapa-nome">Pagamento</div></div><div class="etapa-item"><div class="etapa-numero">4</div><div class="etapa-nome">Concluído</div></div></div>
+<div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div></div><div class="etapa-item"><div class="etapa-numero">2</div></div><div class="etapa-item"><div class="etapa-numero">3</div></div><div class="etapa-item"><div class="etapa-numero">4</div></div></div>
                 
                 
                 
@@ -1560,7 +1560,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
             <!-- ETAPA 3: CONFIRMAÇÃO DE COMPRA E CALENDÁRIO -->
             <div id="etapa3" class="etapa">
                 <div class="modal-header"><img src="images/logoviva.png" alt="Sorte" class="logo-modal"></div>
-<div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div><div class="etapa-nome">CPF</div></div><div class="etapa-item"><div class="etapa-numero">2</div><div class="etapa-nome">Bilhetes</div></div><div class="etapa-item"><div class="etapa-numero">3</div><div class="etapa-nome">Pagamento</div></div><div class="etapa-item"><div class="etapa-numero">4</div><div class="etapa-nome">Concluído</div></div></div>
+<div class="progresso-etapas funil-unificado" aria-label="Etapas do pedido"><div class="etapa-item"><div class="etapa-numero">1</div></div><div class="etapa-item"><div class="etapa-numero">2</div></div><div class="etapa-item"><div class="etapa-numero">3</div></div><div class="etapa-item"><div class="etapa-numero">4</div></div></div>
                 
                 <div class="modal-body">
                     <section class="confirmacao-sorteios" aria-live="polite">
@@ -2937,8 +2937,8 @@ function irParaWhatsApp(){
    var itens=barra.querySelectorAll('.etapa-item');
    itens.forEach(function(item,i){
     item.classList.remove('funil-passado','funil-atual','funil-proximo');
-    if(i<etapa){item.classList.add('funil-passado');item.querySelector('.etapa-numero').textContent='✓';}
-    else if(i===etapa){item.classList.add('funil-atual');item.querySelector('.etapa-numero').textContent=(i+1)+'.';}
+    if(i<etapa){item.classList.add('funil-passado');item.querySelector('.etapa-numero').textContent=String(i+1);}
+    else if(i===etapa){item.classList.add('funil-atual');item.querySelector('.etapa-numero').textContent=String(i+1);}
     else if(i===etapa+1){item.classList.add('funil-proximo');item.querySelector('.etapa-numero').textContent=String(i+1);}
    });
   });
@@ -3122,5 +3122,32 @@ html,body{overflow-x:hidden!important;width:100%!important}
 .sbt-combo-options button.selected{background:#e7edff!important;color:#111!important;animation:sbtBlueSelect 1.7s infinite!important}
 @media(max-width:420px){#etapa1 .modal-body,#etapa2 .modal-body,#etapaCarrinho .modal-body{padding-left:12px!important;padding-right:12px!important}#etapaCarrinho .app-addons>button b{font-size:12px!important}#modalPagamento .funil-unificado .etapa-item{width:39px!important;height:39px!important;min-width:39px!important;max-width:39px!important}}
 </style>
+
+<style id="sbt-v8-consistent-app-ui">
+/* A single visual language for every checkout screen */
+#modalPagamento .progresso-etapas.funil-unificado{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;align-items:center!important;justify-items:center!important;gap:0!important;width:100%!important;height:72px!important;min-height:72px!important;margin:0!important;padding:8px 10px!important;background:linear-gradient(#dce3ef,#dce3ef) center/73% 2px no-repeat!important;overflow:visible!important}
+#modalPagamento .funil-unificado .etapa-item,#modalPagamento .funil-unificado .etapa-item.funil-atual,#modalPagamento .funil-unificado .etapa-item.funil-passado,#modalPagamento .funil-unificado .etapa-item.funil-proximo{display:flex!important;flex:none!important;position:relative!important;justify-self:center!important;align-items:center!important;justify-content:center!important;flex-direction:row!important;gap:0!important;width:42px!important;height:42px!important;min-width:42px!important;max-width:42px!important;min-height:42px!important;padding:0!important;margin:0!important;border:1.5px solid #bed0f7!important;border-radius:50%!important;background:#f4f6fb!important;color:#8593ad!important;box-shadow:none!important;overflow:hidden!important}
+#modalPagamento .funil-unificado .etapa-item.funil-atual,#modalPagamento .funil-unificado .etapa-item.funil-passado{background:#1149f5!important;color:white!important;border-color:#1149f5!important}
+#modalPagamento .funil-unificado .etapa-item .etapa-numero,#modalPagamento .funil-unificado .etapa-item.funil-passado .etapa-numero{display:flex!important;position:static!important;align-items:center!important;justify-content:center!important;flex:none!important;width:100%!important;height:100%!important;min-width:0!important;border:0!important;border-radius:50%!important;background:transparent!important;color:inherit!important;font:800 17px/1 system-ui,sans-serif!important;white-space:nowrap!important}
+#modalPagamento .funil-unificado .etapa-nome,#modalPagamento .funil-unificado .etapa-item:before,#modalPagamento .funil-unificado .etapa-item:after{display:none!important;content:none!important}
+/* Keep green animated CTA, including during PIX generation. Disabled remains visibly disabled. */
+#modalPagamento .etapa .btn-principal:not(:disabled),#modalPagamento .pix-copy-btn:not(:disabled),.sbt-buy-action:not(:disabled){background:linear-gradient(100deg,#16c85d,#40d985)!important;background-color:#22c969!important;color:#fff!important;border:0!important;font-weight:800!important;animation:sbtV8Pulse 1.7s ease-in-out infinite!important;box-shadow:0 4px 13px #14ba5533!important;opacity:1!important}
+#modalPagamento .etapa .btn-principal:not(:disabled)::after,#modalPagamento .pix-copy-btn:not(:disabled)::after{content:'❯❯❯';display:inline-block;margin-left:12px;font-size:18px;letter-spacing:-5px;animation:sbtV8Arrows .85s ease-in-out infinite!important;vertical-align:middle}
+#modalPagamento .etapa .btn-principal:disabled{background:#d8dde5!important;color:#475569!important;animation:none!important;box-shadow:none!important}
+#modalPagamento .etapa .btn-principal:disabled::after{content:none!important}
+.sbt-buy-action .sbt-arrows{animation:sbtV8Arrows .85s ease-in-out infinite!important}
+@keyframes sbtV8Pulse{0%,100%{box-shadow:0 3px 10px #16bd5644,0 0 0 0 #17c96166!important;filter:brightness(1)}50%{box-shadow:0 5px 20px #16bd5680,0 0 0 6px #17c96100!important;filter:brightness(1.07)}}
+@keyframes sbtV8Arrows{0%,100%{transform:translateX(-4px);opacity:.6}55%{transform:translateX(5px);opacity:1}}
+#modalPagamento .etapa .btn-principal,#modalPagamento .pix-copy-btn{min-height:54px!important;border-radius:9px!important}
+#etapa2 .pix-copy-btn{width:100%!important}
+@media(max-width:390px){#modalPagamento .funil-unificado .etapa-item,#modalPagamento .funil-unificado .etapa-item.funil-atual,#modalPagamento .funil-unificado .etapa-item.funil-passado,#modalPagamento .funil-unificado .etapa-item.funil-proximo{width:38px!important;height:38px!important;min-width:38px!important;max-width:38px!important;min-height:38px!important}}
+@media(prefers-reduced-motion:reduce){#modalPagamento .etapa .btn-principal,.sbt-buy-action,#modalPagamento .pix-copy-btn{animation:none!important}}
+</style>
+<script id="sbt-v8-step-numerals">
+(function(){
+ function normalize(){document.querySelectorAll('#modalPagamento .progresso-etapas.funil-unificado').forEach(function(bar){bar.querySelectorAll('.etapa-item').forEach(function(item,i){var n=item.querySelector('.etapa-numero');if(n&&n.textContent.trim()!==String(i+1))n.textContent=String(i+1);});});}
+ document.addEventListener('DOMContentLoaded',function(){normalize();var modal=document.getElementById('modalPagamento');if(!modal)return;var scheduled=false;new MutationObserver(function(){if(scheduled)return;scheduled=true;queueMicrotask(function(){scheduled=false;normalize();});}).observe(modal,{subtree:true,childList:true,characterData:true});});
+})();
+</script>
 </body>
 </html>
