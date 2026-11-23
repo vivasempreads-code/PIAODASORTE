@@ -20,7 +20,7 @@ export default async function handler(req, res) {
         const telefone = (input.telefone || '').replace(/\D/g, '');
         const quantidade = parseInt(input.quantidade) || 0;
         
-        if (amount <= 0 || cpf.length !== 11 || telefone.length < 10 || quantidade <= 0) {
+        if (amount <= 0 || cpf.length !== 11 || telefone.length < 10 || quantidade < 8 || Math.abs(amount - quantidade * 0.49) > 0.011) {
             return res.status(400).json({
                 success: false,
                 error: 'Dados inválidos ou incompletos'

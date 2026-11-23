@@ -1309,25 +1309,25 @@
     <div class="container-principal">
         <div class="cotas">
             <div class="cotas-one">
+                <button type="button" class="cota" onclick="selecionarPacote(8, 3.92, event)">
+                    <div class="cota-qtd">+8</div><h1>R$3,92</h1><h2>SELECIONAR</h2>
+                </button>
                 <button type="button" class="cota" onclick="selecionarPacote(15, 7.35, event)">
                     <div class="cota-qtd">+15</div><h1>R$7,35</h1><h2>SELECIONAR</h2>
                 </button>
                 <button type="button" class="cota" onclick="selecionarPacote(25, 12.25, event)">
                     <div class="cota-qtd">+25</div><h1>R$12,25</h1><h2>SELECIONAR</h2>
                 </button>
+            </div>
+            <div class="cotas-one">
                 <button type="button" class="cota" onclick="selecionarPacote(50, 24.50, event)">
                     <div class="cota-qtd">+50</div><h1>R$24,50</h1><h2>SELECIONAR</h2>
                 </button>
-            </div>
-            <div class="cotas-one">
                 <button type="button" class="cota" onclick="selecionarPacote(75, 36.75, event)">
-                    <div class="cota-qtd">+75</div><h1>R$36,75</h1><h2>SELECIONAR</h2>
+                    <i class="bi bi-star-fill destaque"></i><div class="cota-qtd">+75</div><h1>R$36,75</h1><h2>SELECIONAR</h2>
                 </button>
                 <button type="button" class="cota" onclick="selecionarPacote(100, 49.00, event)">
-                    <i class="bi bi-star-fill destaque"></i><div class="cota-qtd">+100</div><h1>R$49,00</h1><h2>SELECIONAR</h2>
-                </button>
-                <button type="button" class="cota" onclick="selecionarPacote(150, 73.50, event)">
-                    <div class="cota-qtd">+150</div><h1>R$73,50</h1><h2>SELECIONAR</h2>
+                    <div class="cota-qtd">+100</div><h1>R$49,00</h1><h2>SELECIONAR</h2>
                 </button>
             </div>
     </div>
@@ -1336,7 +1336,7 @@
     <div class="container-principal">
         <div class="contador-cotas">
             <span><button type="button" class="btn-contador-cotas" onclick="decrementar()">-</button></span>
-            <input type="number" id="numero" class="input-contador-cotas" value="15" min="15" step="1" inputmode="numeric">
+            <input type="number" id="numero" class="input-contador-cotas" value="8" min="8" step="1" inputmode="numeric">
             <span><button type="button" class="btn-contador-cotas" onclick="incrementar()">+</button></span>
         </div>
         
@@ -1484,13 +1484,13 @@
  <div class="modal-body">
   
   <div class="cart-head">Seu carrinho</div>
-  <div class="cart-line"><div><strong>🎟️ Números da sorte</strong><div class="cart-sub">Ajuste seus títulos</div></div><div class="cart-counter"><button type="button" onclick="mudarQuantidadeCarrinho(-1)" aria-label="Diminuir">−</button><strong id="cartQtd">15</strong><button type="button" onclick="mudarQuantidadeCarrinho(1)" aria-label="Aumentar">+</button></div></div>
+  <div class="cart-line"><div><strong>🎟️ Números da sorte</strong><div class="cart-sub">Ajuste seus títulos</div></div><div class="cart-counter"><button type="button" onclick="mudarQuantidadeCarrinho(-1)" aria-label="Diminuir">−</button><strong id="cartQtd">8</strong><button type="button" onclick="mudarQuantidadeCarrinho(1)" aria-label="Aumentar">+</button></div></div>
   <div class="cart-offer"><div class="cart-offer-top">🎁 PRÊMIOS DA EDIÇÃO</div><div class="cart-offer-body">
 <div class="premio-card"><strong>🎉 Hoje: até R$ 200 mil no PIX, casas e carros</strong><div class="premio-timer">⏳ Em breve: <b class="contador-hoje">30:00</b> · <span class="data-hoje">—</span></div></div>
 <div class="premio-card"><strong>🏆 Domingo: R$ 1 milhão</strong><div class="premio-timer">⏳ <span class="data-domingo">—</span>, 21h: <b class="contador-domingo">—</b></div></div>
-<p class="premio-nota">O contador de 30 min é ilustrativo, não o horário oficial do sorteio. Consulte o regulamento.</p><span class="cart-offer-quantity">🎟️ <b id="cartQtdOferta">15</b> títulos</span></div></div>
+<p class="premio-nota">O contador de 30 min é ilustrativo, não o horário oficial do sorteio. Consulte o regulamento.</p><span class="cart-offer-quantity">🎟️ <b id="cartQtdOferta">8</b> títulos</span></div></div>
   <div class="cart-summary-title">RESUMO <small>da sua compra</small></div>
-  <div class="cart-line"><span>🎟️ Números da sorte</span><strong id="cartQtdResumo">15</strong></div>
+  <div class="cart-line"><span>🎟️ Números da sorte</span><strong id="cartQtdResumo">8</strong></div>
   <div class="cart-line cart-price-line"><span>Valor dos títulos</span><strong id="cartValor">R$ 0,00</strong></div>
   <div class="cart-total"><span>Total a pagar</span><span id="cartTotal">R$ 0,00</span></div>
   <div class="pix-only" role="radio" aria-checked="true"><span class="pix-radio" aria-hidden="true"></span><img class="pix-logo" src="https://baixarfavicon.com.br/wp-content/themes/baixarfavicon/ferramentas/logos-pix-png/logos/logo-pix-520x520.png" alt="Logo Pix"><strong>Pix</strong><span class="pix-selected">Selecionado</span></div>
@@ -1588,7 +1588,7 @@
         </div>
     </div>
 
-<section id="piaoScreen" class="piao-screen" aria-label="Jogo Pião da Sorte"><div class="piao-panel"><button class="piao-close" type="button" onclick="fecharPiao()">Fechar ×</button><div class="sub">★ PIÃO DA SORTE ★</div><h2>GIRE E DESCUBRA!</h2><p>Prêmio instantâneo de R$ 10.000</p><p id="piaoChances">5 giros disponíveis</p><div class="piao-wheel-wrap"><div class="piao-pointer"></div><div id="piaoWheel" class="piao-wheel"></div></div><button id="piaoGirar" class="piao-action" type="button" onclick="girarPiao()">GIRAR O PIÃO</button><div id="piaoResultado" class="piao-result" style="display:none" aria-live="polite"></div><p class="minor">Resultado validado no servidor. Uma participação por pagamento confirmado.</p></div></section>
+<section id="piaoScreen" class="piao-screen" aria-label="Jogo Pião da Sorte"><div class="piao-panel"><button class="piao-close" type="button" onclick="fecharPiao()">Fechar ×</button><div class="sub">★ PIÃO DA SORTE ★</div><h2>GIRE E DESCUBRA!</h2><p>Gire para consultar seu resultado. Prêmios sujeitos às regras.</p><p id="piaoChances">5 giros disponíveis</p><div class="piao-wheel-wrap"><div class="piao-pointer"></div><div id="piaoWheel" class="piao-wheel"><div class="piao-cubo" aria-hidden="true"><span>R$ 2 MIL</span><span>R$ 4 MIL</span><span>R$ 5 MIL</span><span>R$ 10 MIL</span></div></div></div><button id="piaoGirar" class="piao-action" type="button" onclick="girarPiao()">GIRAR O PIÃO</button><div id="piaoResultado" class="piao-result" style="display:none" aria-live="polite"></div><p class="minor">Resultado validado no servidor. Uma participação por pagamento confirmado.</p></div></section>
     <!-- POPUPS DE NOTIFICAÇÃO -->
     <div class="popup" id="popup"></div>
     <audio id="notifySound" preload="auto">
@@ -1623,8 +1623,8 @@
 
     // VARIÁVEIS GLOBAIS
     let pacoteSelecionado = {
-        quantidade: 6,
-        valor: 2.94
+        quantidade: 8,
+        valor: 3.92
     };
     
     let dadosUsuario = {
@@ -1709,7 +1709,7 @@
         window.open(whatsappLink, '_blank', 'noopener,noreferrer');
     }
 
-    const MINIMO_TITULOS = 15;
+    const MINIMO_TITULOS = 8;
     const MAXIMO_TITULOS = 150;
 
     function incrementar() {
@@ -1753,7 +1753,7 @@
         if (quantidade < MINIMO_TITULOS) {
             input.value = MINIMO_TITULOS;
             atualizarBotaoComprar();
-            mostrarPopupNotificacao('O pedido mínimo é de 15 títulos (R$ 7,35).', true);
+            mostrarPopupNotificacao('O pedido mínimo é de 8 títulos (R$ 3,92).', true);
             return;
         }
         quantidade = Math.min(quantidade, MAXIMO_TITULOS);
@@ -2961,6 +2961,60 @@ function fecharPiao(){document.getElementById('piaoScreen').classList.remove('sh
 function abrirPiao(){document.getElementById('piaoScreen').classList.add('show');document.getElementById('piaoResultado').style.display='none';document.getElementById('piaoGirar').disabled=false;document.getElementById('piaoGirar').textContent='GIRAR O PIÃO';document.getElementById('piaoChances').textContent='Carregando chances...';consultarPiao()}
 async function consultarPiao(){try{let r=await fetch('/api/piao?transaction_id='+encodeURIComponent(dadosUsuario.transactionId),{cache:'no-store'});let j=await r.json();if(!r.ok)throw Error(j.error||'Erro ao consultar');atualizarPiao(j)}catch(e){document.getElementById('piaoChances').textContent=e.message;document.getElementById('piaoGirar').disabled=true}}
 function atualizarPiao(j){piaoRodadas=j.giros||0;document.getElementById('piaoChances').textContent=(5-piaoRodadas)+' de 5 giros restantes';let b=document.getElementById('piaoGirar'),v=document.getElementById('piaoResultado');b.disabled=!!j.finalizado;b.textContent=j.finalizado?'SEM GIROS DISPONÍVEIS':'GIRAR O PIÃO';if(j.finalizado){v.style.display='block';v.innerHTML=j.premio===10000?'<h3>🎉 PRÊMIO DE R$ 10.000!</h3><p>Seu resultado foi registrado. Nossa equipe entrará em contato para validação e orientações sobre a videochamada e entrega da premiação.</p>':'<h3>PIÃO DA SORTE</h3><p>NÃO FOI DESSA VEZ...</p><p>Você utilizou seus cinco giros. Sua participação no sorteio principal permanece válida, conforme as condições da sua compra.</p>'}}
-async function girarPiao(){if(piaoOcupado)return;piaoOcupado=true;const b=document.getElementById('piaoGirar');b.disabled=true;b.textContent='GIRANDO...';try{let r=await fetch('/api/piao',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({transaction_id:dadosUsuario.transactionId,route:dadosUsuario.pixData?.route||'safepix'})});let j=await r.json();if(!r.ok)throw Error(j.error||'Não foi possível girar');piaoGrau+=1440+Math.floor(Math.random()*360);document.getElementById('piaoWheel').style.transform='rotate('+piaoGrau+'deg)';setTimeout(()=>{atualizarPiao(j);if(!j.finalizado){let v=document.getElementById('piaoResultado');v.style.display='block';v.innerHTML='<h3>AINDA NÃO FOI DESSA VEZ</h3><p>Você tem mais '+(5-j.giros)+' chance(s). Continue girando!</p>'}piaoOcupado=false;b.disabled=!!j.finalizado;b.textContent=j.finalizado?'SEM GIROS DISPONÍVEIS':'GIRAR NOVAMENTE'},3500)}catch(e){let v=document.getElementById('piaoResultado');v.style.display='block';v.textContent=e.message;b.disabled=false;b.textContent='TENTAR NOVAMENTE';piaoOcupado=false}}
+async function girarPiao(){if(piaoOcupado)return;piaoOcupado=true;const b=document.getElementById('piaoGirar');b.disabled=true;b.textContent='GIRANDO...';try{let r=await fetch('/api/piao',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({transaction_id:dadosUsuario.transactionId,route:dadosUsuario.pixData?.route||'safepix'})});let j=await r.json();if(!r.ok)throw Error(j.error||'Não foi possível girar');tocarSomPiao();piaoGrau+=1440+Math.floor(Math.random()*360);document.getElementById('piaoWheel').style.transform='rotate('+piaoGrau+'deg)';setTimeout(()=>{pararSomPiao();atualizarPiao(j);if(j.premio>0)celebrarPiao();if(!j.finalizado){let v=document.getElementById('piaoResultado');v.style.display='block';v.innerHTML='<h3>AINDA NÃO FOI DESSA VEZ</h3><p>Você tem mais '+(5-j.giros)+' chance(s). Continue girando!</p>'}piaoOcupado=false;b.disabled=!!j.finalizado;b.textContent=j.finalizado?'SEM GIROS DISPONÍVEIS':'GIRAR NOVAMENTE'},3500)}catch(e){let v=document.getElementById('piaoResultado');v.style.display='block';v.textContent=e.message;b.disabled=false;b.textContent='TENTAR NOVAMENTE';pararSomPiao();piaoOcupado=false}}
+</script>
+<style id="nova-identidade">
+:root{--azul-premio:#1047ef;--verde-premio:#24ca6b}
+.white-header{background:#1047ef!important;color:white!important}
+.cotas,.contador-cotas{border-radius:16px!important}
+.adc-carrinho,#etapaCarrinho .btn-principal{background:linear-gradient(90deg,#16c45f,#43da85)!important;color:#fff!important;border:0!important;border-radius:12px!important}
+#etapaCarrinho .cart-head,#etapa2 .pix-payment-heading{background:#1047ef!important}
+#etapaCarrinho .cart-total{background:#f4f6fb!important;color:#122039!important}
+#etapaCarrinho .cart-line{border-color:#edf0f6!important}
+#etapaCarrinho .cart-offer{background:#f7f9ff!important;border-color:#dce5ff!important}
+#etapaCarrinho .cart-offer-top{background:#1047ef!important}
+.detalhes-card{max-width:920px;margin:16px auto;padding:20px;background:#f5f7fc;border-radius:18px;color:#172033;font-family:Inter,system-ui,sans-serif}
+.detalhes-card h2{font-size:24px;font-weight:850}.detalhes-card p{font-size:14px;color:#4b5563}
+.detalhes-btn{border:0;border-radius:10px;background:#1047ef;color:#fff;padding:13px 24px;font-weight:800;cursor:pointer;width:100%}
+#detalhesOverlay{display:none;position:fixed;inset:0;background:#07132fbb;z-index:999999;align-items:center;justify-content:center;padding:10px}
+#detalhesOverlay.open{display:flex}
+.detalhes-dialog{position:relative;width:min(100%,620px);max-height:94dvh;overflow:auto;background:#fff;border-radius:20px;padding:24px 20px 30px;color:#16223a;box-shadow:0 20px 80px #0005;overscroll-behavior:contain}
+.detalhes-dialog h2{font-size:25px;font-weight:900;margin:12px 0}.detalhes-dialog h3{font-size:18px;font-weight:800;margin:22px 0 9px}
+.detalhes-dialog p,.detalhes-dialog li{font-size:15px;line-height:1.6}.detalhes-dialog .close-detail{position:sticky;top:0;float:right;border:0;background:#eaf0ff;color:#1047ef;padding:10px 14px;border-radius:12px;font-weight:800;z-index:2}
+.detalhes-dialog .detail-step{padding:12px;background:#f3f6fd;border-radius:12px;margin:8px 0}
+@media(max-width:600px){.detalhes-card{margin:12px;padding:16px}.detalhes-dialog{max-height:100dvh;height:100dvh;border-radius:0;padding:20px 16px}#detalhesOverlay{padding:0}}
+</style>
+<section class="detalhes-card" aria-label="Informações da participação">
+<h2>Últimos resultados e informações</h2><p>Confira como funciona a participação, os valores e as condições do Pião da Sorte. Resultados e prêmios somente são confirmados após validação.</p>
+<button class="detalhes-btn" type="button" onclick="abrirDetalhes()">VER DETALHES ›</button>
+</section>
+<div id="detalhesOverlay" role="dialog" aria-modal="true" aria-labelledby="detalhesTitulo" aria-hidden="true" onclick="if(event.target===this)fecharDetalhes()">
+<div class="detalhes-dialog" tabindex="-1"><button class="close-detail" type="button" onclick="fecharDetalhes()" aria-label="Fechar detalhes">✕ Fechar</button>
+<h2 id="detalhesTitulo">Detalhes da participação</h2>
+<p>Informações da experiência de títulos e do Pião da Sorte deste site. Os exemplos visuais não representam garantia de premiação.</p>
+<h3>Valor dos títulos</h3><p>Cada título custa R$ 0,49. Compra mínima de 8 títulos, totalizando R$ 3,92. A quantidade selecionada e o total são exibidos antes de gerar o PIX.</p>
+<h3>Como participar</h3><div class="detail-step">1. Escolha a quantidade de títulos.</div><div class="detail-step">2. Informe os dados solicitados para identificação.</div><div class="detail-step">3. Confira o resumo e pague por PIX.</div><div class="detail-step">4. Aguarde a confirmação real do pagamento.</div><div class="detail-step">5. Se elegível, acesse o Pião da Sorte e consulte o resultado registrado.</div>
+<h3>Pião da Sorte</h3><p>Os giros dependem da confirmação do pagamento e da disponibilidade do sistema. A animação não define o resultado: a validação ocorre no servidor. Nenhum prêmio é garantido.</p>
+<h3>Premiações e resultados</h3><p>Consulte somente o regulamento oficial e os resultados verificáveis da campanha efetivamente contratada. Esta versão não publica nomes de ganhadores, números de autorização nem valores de prêmios que não tenham sido comprovados.</p>
+<h3>Condições gerais</h3><p>O pagamento não garante prêmio instantâneo. Confira regras, elegibilidade, datas, limites e procedimentos de validação antes de participar.</p>
+<button class="detalhes-btn" type="button" onclick="fecharDetalhes()">VOLTAR À PÁGINA INICIAL</button>
+</div></div>
+<script>
+let detalhesAberto=false;
+function abrirDetalhes(){let o=document.getElementById('detalhesOverlay');o.classList.add('open');o.setAttribute('aria-hidden','false');detalhesAberto=true;history.pushState({detalhes:true},'','#detalhes');o.querySelector('.close-detail').focus()}
+function fecharDetalhes(fromPop){let o=document.getElementById('detalhesOverlay');o.classList.remove('open');o.setAttribute('aria-hidden','true');detalhesAberto=false;if(!fromPop&&history.state?.detalhes)history.back()}
+window.addEventListener('popstate',()=>{if(detalhesAberto)fecharDetalhes(true)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&detalhesAberto)fecharDetalhes()});
+</script>
+<style id="piao-animado">
+.piao-wheel:after{display:none!important}.piao-cubo{position:absolute;inset:36%;z-index:1;border:5px solid #fff;border-radius:18px;background:linear-gradient(145deg,#ffd579,#e9a62d);box-shadow:inset -8px -8px 15px #ad751f77,0 8px 20px #0006;display:flex;align-items:center;justify-content:center;transform:perspective(240px) rotateY(16deg);animation:cuboFlutua 3s ease-in-out infinite}.piao-cubo span{position:absolute;font-size:clamp(9px,2.5vw,13px);font-weight:950;color:#092f79;backface-visibility:hidden;text-shadow:0 1px white}.piao-cubo span:nth-child(2){transform:rotateY(90deg) translateZ(24px)}.piao-cubo span:nth-child(3){transform:rotateY(180deg) translateZ(24px)}.piao-cubo span:nth-child(4){transform:rotateY(270deg) translateZ(24px)}.piao-cubo span:first-child{transform:translateZ(24px)}
+@keyframes cuboFlutua{0%,100%{transform:perspective(240px) rotateY(10deg) rotateX(8deg)}50%{transform:perspective(240px) rotateY(165deg) rotateX(-12deg)}}
+.piao-confete{position:fixed;top:-20px;width:10px;height:17px;z-index:100001;pointer-events:none;animation:confeteCai 3.4s linear forwards}@keyframes confeteCai{to{transform:translateY(110vh) rotate(900deg);opacity:0}}
+@media(prefers-reduced-motion:reduce){.piao-cubo{animation:none}.piao-confete{animation-duration:.01s}}
+</style><script>
+let somPiaoCtx=null,somPiaoTimer=null;
+function tocarSomPiao(){try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;somPiaoCtx=somPiaoCtx||new AC();somPiaoCtx.resume();let n=0;somPiaoTimer=setInterval(()=>{let osc=somPiaoCtx.createOscillator(),gain=somPiaoCtx.createGain();osc.type='triangle';osc.frequency.value=620+(n++%5)*80;gain.gain.setValueAtTime(.045,somPiaoCtx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,somPiaoCtx.currentTime+.08);osc.connect(gain);gain.connect(somPiaoCtx.destination);osc.start();osc.stop(somPiaoCtx.currentTime+.09)},115)}catch(e){}}
+function pararSomPiao(){if(somPiaoTimer){clearInterval(somPiaoTimer);somPiaoTimer=null}}
+function celebrarPiao(){for(let i=0;i<65;i++){let c=document.createElement('span');c.className='piao-confete';c.style.left=Math.random()*100+'vw';c.style.background=['#ffd24f','#21d779','#fff','#467eff'][i%4];c.style.animationDelay=Math.random()*.8+'s';document.body.append(c);setTimeout(()=>c.remove(),4400)}}
 </script></body>
 </html>
