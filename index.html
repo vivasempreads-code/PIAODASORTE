@@ -1331,6 +1331,29 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
 @media(max-width:420px){#etapaCarrinho .app-addons{gap:8px!important;padding:5px 8px 10px!important}#etapaCarrinho .app-addons>button{min-height:51px!important;padding:7px 9px!important}#etapaCarrinho .app-addons>button b,#etapaCarrinho .app-addons>button strong{font-size:12px!important}#etapaCarrinho .modal-body{padding-left:10px!important;padding-right:10px!important}}
 @media(prefers-reduced-motion:reduce){#etapaCarrinho .app-addons>button.featured-offer{animation:none!important}}
 </style>
+
+<style id="sbt-v11-visual-payment-whatsapp">
+/* Visual-only: preserve the original payment creation and confirmation handlers. */
+#etapa2 #aguardandoConfirmacao{display:none!important}
+#etapa2 #whatsappStep .form-group input#inputTelefone{border:2px solid #b9c8e4!important;border-radius:13px!important;min-height:57px!important;transition:border-color .2s,box-shadow .2s!important;box-sizing:border-box!important;width:100%!important}
+#etapa2 #whatsappStep .form-group input#inputTelefone:focus{outline:none!important;border-color:#1bc967!important;animation:sbtV11PhonePulse 1.6s ease-in-out infinite!important}
+@keyframes sbtV11PhonePulse{0%,100%{box-shadow:0 0 0 3px rgba(33,204,111,.16)}50%{box-shadow:0 0 0 7px rgba(33,204,111,.26)}}
+/* Standardize prices and totals across purchase and payment steps. */
+#etapa2 .total-pagamento,#etapa2 .total-pagamento>div:last-child,#etapa2 .detalhes-pagamento>div:last-child,#etapa2 #pixValorTela,#etapaCarrinho #cartTotal,#etapa2 .pix-payment-value b{color:#ffb83e!important;font-weight:800!important;font-variant-numeric:tabular-nums!important}
+#etapa2 .resumo-pagamento{background:#f5f7fc!important;border-radius:15px!important;border:0!important;padding:16px!important}
+#etapa2 .resumo-pagamento h3{color:#121a2b!important;font-weight:750!important}
+#etapa2 .resumo-pagamento .detalhes-pagamento{color:#39445b!important}
+#etapa2 .total-pagamento{border-top:1px solid #dce2ec!important;padding-top:12px!important;margin-top:12px!important}
+#etapa2 #areaPIX .sbt-pix-status{margin-bottom:14px!important}
+#etapa2 #areaPIX .v10-spinner{animation:sbtV11Spin 1s linear infinite!important}
+@keyframes sbtV11Spin{to{transform:rotate(360deg)}}
+#etapa2 #areaPIX .pix-copy-btn{background:#22c96a!important;color:#fff!important;animation:sbtV8Pulse 1.7s ease-in-out infinite!important}
+#etapa2 #areaPIX .pix-show-qr-btn{background:#e9edf3!important;color:#152135!important;border:1px solid #d3dae4!important}
+#etapa2 #whatsappStep,#etapa2 #areaPIX{max-width:100%!important;min-width:0!important;box-sizing:border-box!important}
+#modalPagamento .modal-body,#modalPagamento .modal-conteudo{overflow-x:hidden!important}
+@media(min-width:700px){#modalPagamento .modal-conteudo{max-width:680px!important;margin-inline:auto!important}#etapa2 .modal-body{max-width:650px!important;margin-inline:auto!important}}
+@media(max-width:480px){#etapa2 #whatsappStep .resumo-pagamento{padding:13px!important}#etapa2 #whatsappStep h2{font-size:24px!important}#etapa2 #whatsappStep>p{font-size:14px!important}}
+</style>
 </head>
 <body>
     <header class="sbt-topbar"><button type="button" class="sbt-menu" aria-label="Menu" onclick="document.getElementById('informacoesPromo').scrollIntoView({behavior:'smooth'})">☰</button><div class="sbt-wordmark"><span>sbt</span> PRÊMIOS</div><span class="sbt-profile" aria-hidden="true">◉</span></header>
@@ -1545,7 +1568,7 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
                         <div class="pix-howto">📱 Abra seu banco, escolha Pix e confirme o pagamento.</div>
                     </div>
 
-                    <div id="aguardandoConfirmacao" class="aguardando-confirmacao">
+                    <div id="aguardandoConfirmacao" class="aguardando-confirmacao" aria-hidden="true">
                         <div class="rodinha-grande"></div>
                         <div class="aguardando-texto">Aguardando confirmação do pagamento</div>
                         <div class="aguardando-detalhes" id="statusAguardando">Verificando se o pagamento foi realizado...</div>
