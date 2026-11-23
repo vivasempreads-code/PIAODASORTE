@@ -2300,7 +2300,6 @@ function irParaWhatsApp(){
             mostrarPopupNotificacao('PIX gerado! Copie o código ou escaneie o QR Code.');
             
             iniciarVerificacaoAutomatica();
-            atualizarPrazoPixV10(resultado);
             
         } catch (error) {
             console.error('❌ Erro:', error);
@@ -2466,7 +2465,15 @@ function irParaWhatsApp(){
         try { atualizarConfirmacaoSorteios(); } catch(e) { console.warn('Contadores:', e); }
         try { mostrarPopupNotificacao('Pagamento confirmado!'); } catch(e) {}
         mostrarEtapa(3);
-        abrirPiao();
+        // A roleta e um complemento visual apos a confirmacao original.
+        // Falhas da interface da roleta nao afetam o reconhecimento do PIX.
+        try {
+            const modal = document.getElementById('modalPagamento');
+            if (modal) modal.style.display = 'none';
+            if (typeof abrirPiao === 'function') abrirPiao();
+        } catch (erroRoleta) {
+            console.warn('Roleta indisponivel apos pagamento confirmado:', erroRoleta);
+        }
     }
 
     function salvarConfirmacaoPagamento() {
