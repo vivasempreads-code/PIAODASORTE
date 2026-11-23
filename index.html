@@ -1305,6 +1305,32 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
 #etapaCarrinho #btnCarrinhoPagar{position:static!important;width:100%;background:#28c866!important;border-radius:8px!important;box-shadow:none!important;}
 @media(max-width:600px){#modalPagamento .modal-conteudo{max-width:100%!important}#modalPagamento .btn-fechar-modal{right:12px!important}#modalPagamento .modal-body{padding-left:13px!important;padding-right:13px!important}#etapaCarrinho .app-cart-bottom{margin-left:-13px;margin-right:-13px}}
 </style>
+<style id="mobile-reference-compact-v3">
+/* Revisão visual localizada: nenhuma seleção de oferta é automática. */
+#etapaCarrinho .app-cart-title{font-size:20px!important;text-align:center!important;margin:10px 0 14px!important;color:#111!important}
+#etapaCarrinho .modal-body{padding:10px 14px 104px!important;background:#fff!important}
+#etapaCarrinho .app-cart-summary{background:#f5f7fc!important;border-radius:12px!important;padding:12px!important;display:grid!important;gap:9px!important;margin-bottom:12px!important}
+#etapaCarrinho .app-cart-summary>div{background:#fff!important;padding:12px 14px!important;border-radius:10px!important;display:flex!important;justify-content:space-between!important;align-items:center!important;font-size:14px!important}
+#etapaCarrinho .app-offer-title{background:#f5f7fc!important;text-align:center!important;padding:12px 8px 6px!important;font-size:16px!important;line-height:1.25!important;margin:0!important;color:#111!important}
+#etapaCarrinho .app-addons{background:#f5f7fc!important;padding:6px 12px 12px!important;gap:10px!important;border-radius:0 0 12px 12px!important}
+#etapaCarrinho .app-addons>button{min-height:56px!important;border-radius:6px!important;padding:9px 12px!important;background:#fff!important;border:1px solid #e1e8ff!important;display:flex!important;align-items:center!important;gap:10px!important}
+#etapaCarrinho .app-addons>button span{display:block!important;text-align:center!important;flex:1!important}
+#etapaCarrinho .app-addons>button b{font-size:14px!important;text-transform:uppercase!important}
+#etapaCarrinho .app-addons>button small{display:none!important}
+#etapaCarrinho .app-addons>button strong{font-size:14px!important;white-space:nowrap!important;text-align:right!important}
+#etapaCarrinho .app-addons>button.featured-offer{background:#79dba0!important;border:3px solid #bdf3cd!important;color:#fff!important;animation:offerBreath 2.2s ease-in-out infinite!important}
+#etapaCarrinho .app-addons>button.featured-offer strong{color:#fff!important}
+@keyframes offerBreath{0%,100%{box-shadow:0 0 0 0 rgba(39,194,100,.05);filter:brightness(1)}50%{box-shadow:0 0 0 4px rgba(39,194,100,.19);filter:brightness(1.05)}}
+#etapaCarrinho .app-cart-bottom{position:sticky!important;bottom:0!important;background:#f5f7fc!important;border-radius:20px 20px 0 0!important;padding:12px 14px calc(12px + env(safe-area-inset-bottom))!important;box-shadow:0 -4px 18px #132b4c12!important}
+#etapaCarrinho .app-cart-bottom .btn-principal{background:#25cb6b!important;min-height:53px!important;font-size:15px!important}
+#etapaCarrinho .app-total strong{color:#ffb83f!important}
+#modalPagamento .funil-unificado{display:flex!important;justify-content:space-around!important;align-items:center!important;background:#fff!important;gap:0!important}
+#modalPagamento .funil-unificado .etapa-item{flex:1!important;display:flex!important;justify-content:center!important;position:relative!important}
+#modalPagamento .funil-unificado .etapa-item:not(:last-child)::after{content:'';position:absolute;top:19px;left:calc(50% + 19px);width:calc(100% - 38px);height:2px;background:#e5e7eb;z-index:0}
+#modalPagamento .funil-unificado .etapa-numero{position:relative;z-index:1}
+@media(max-width:420px){#etapaCarrinho .app-addons{gap:8px!important;padding:5px 8px 10px!important}#etapaCarrinho .app-addons>button{min-height:51px!important;padding:7px 9px!important}#etapaCarrinho .app-addons>button b,#etapaCarrinho .app-addons>button strong{font-size:12px!important}#etapaCarrinho .modal-body{padding-left:10px!important;padding-right:10px!important}}
+@media(prefers-reduced-motion:reduce){#etapaCarrinho .app-addons>button.featured-offer{animation:none!important}}
+</style>
 </head>
 <body>
     <header class="sbt-topbar"><button type="button" class="sbt-menu" aria-label="Menu" onclick="document.getElementById('informacoesPromo').scrollIntoView({behavior:'smooth'})">☰</button><div class="sbt-wordmark"><span>sbt</span> PRÊMIOS</div><span class="sbt-profile" aria-hidden="true">◉</span></header>
@@ -1482,10 +1508,9 @@ html{scroll-behavior:smooth}body{overflow-x:hidden!important}.sbt-topbar{positio
   <div class="app-cart-summary"><div>Quantidade de títulos <strong id="cartQtdResumo">8</strong></div><div>Valor total <strong id="cartValor">R$ 3,92</strong></div></div>
   <h3 class="app-offer-title">Aumente suas chances com mais títulos!</h3>
   <div class="app-addons">
-    <div class="sbt-cart-counter"><span>Quantidade de títulos</span><div><button type="button" onclick="mudarQuantidadeCarrinho(-1)" aria-label="Diminuir">−</button><strong id="sbtCartQty">8</strong><button type="button" onclick="mudarQuantidadeCarrinho(1)" aria-label="Aumentar">+</button></div></div>
     <button type="button" onclick="adicionarTitulos(8)"><span><b>Nova chance</b><small>+8 títulos</small></span><strong>+R$ 3,92</strong></button>
     <button type="button" onclick="adicionarTitulos(15)"><span><b>Grande chance</b><small>+15 títulos</small></span><strong>+R$ 7,35</strong></button>
-    <button type="button" onclick="adicionarTitulos(25)"><span><b>Super chance</b><small>+25 títulos</small></span><strong>+R$ 12,25</strong></button>
+    <button type="button" class="featured-offer" onclick="adicionarTitulos(25)" aria-label="Adicionar 25 títulos por R$ 12,25"><span><b>Super chance</b><small>+25 títulos</small></span><strong>+R$ 12,25</strong></button>
     <button type="button" onclick="adicionarTitulos(50)"><span><b>Super mega chance</b><small>+50 títulos</small></span><strong>+R$ 24,50</strong></button>
   </div>
   <div class="app-cart-bottom"><div class="app-total"><span>VALOR TOTAL</span><strong id="cartTotal">R$ 3,92</strong></div>
