@@ -3208,5 +3208,35 @@ function atualizarPrazoPixV10(data){
  tick();v10PixTimer=setInterval(tick,1000);
 }
 </script>
+
+<style id="v12-whatsapp-gold-visual-only">
+/* Visual changes only: no payment, polling, or form logic modified. */
+#etapa2 #whatsappStep #inputTelefone,
+#etapa2 #whatsappStep #inputTelefone:focus,
+#etapa2 #whatsappStep #inputTelefone:not(:focus){
+  border:2px solid #16c85d!important;outline:none!important;
+  border-radius:13px!important;background:#fff!important;
+  animation:v12PhoneGlow 1.65s ease-in-out infinite!important;
+  transition:background-color .2s ease!important;
+}
+@keyframes v12PhoneGlow{
+  0%,100%{box-shadow:0 0 0 2px rgba(18,198,91,.22),0 0 10px rgba(18,198,91,.15)}
+  50%{box-shadow:0 0 0 6px rgba(18,198,91,.11),0 0 18px rgba(18,198,91,.35)}
+}
+#etapa1 #btnContinuarCPF:not(:disabled){
+  background:linear-gradient(115deg,#8b580a 0%,#dba928 20%,#fff1a2 42%,#c58a15 62%,#f6d56a 82%,#9d650b 100%)!important;
+  background-size:220% 100%!important;color:#382400!important;
+  border:1px solid #a77412!important;border-radius:12px!important;
+  font-weight:900!important;text-shadow:0 1px 1px rgba(255,255,255,.45)!important;
+  animation:v12GoldShimmer 3s linear infinite,v12GoldGlow 1.8s ease-in-out infinite!important;
+  box-shadow:0 5px 16px rgba(164,108,14,.35)!important;
+}
+#etapa1 #btnContinuarCPF:not(:disabled)::after{content:' ❯❯❯'!important;display:inline-block!important;
+  letter-spacing:-5px;margin-left:9px;animation:sbtV8Arrows .85s ease-in-out infinite!important}
+#etapa1 #btnContinuarCPF:disabled{animation:none!important;box-shadow:none!important}
+@keyframes v12GoldShimmer{from{background-position:100% 50%}to{background-position:-100% 50%}}
+@keyframes v12GoldGlow{0%,100%{filter:brightness(1);box-shadow:0 5px 14px rgba(164,108,14,.32)}50%{filter:brightness(1.1);box-shadow:0 5px 23px rgba(207,152,24,.58)}}
+@media(prefers-reduced-motion:reduce){#etapa2 #whatsappStep #inputTelefone,#etapa1 #btnContinuarCPF:not(:disabled){animation:none!important}}
+</style>
 </body>
 </html>
